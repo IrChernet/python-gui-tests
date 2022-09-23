@@ -14,7 +14,7 @@ class GroupHelper:
         self.open_group_editor()
         tree = self.group_editor_win.window(auto_id="uxAddressTreeView")
         root = tree.tree_root()
-        group_list = [node.text for node in root.children()]
+        group_list = [node.text() for node in root.children()]
         self.close_group_editor()
         return group_list
 
